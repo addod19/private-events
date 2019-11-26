@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
+  root 'users#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :users, only: [:new, :create, :show]
+  resources :sessions, only: %i[new create destroy]
+  get 'signin', to: 'sessions#new'
+  post 'signin', to: 'sessions#create'
+  get 'signout', to: 'sessions#destroy'
+
+  # match '/signin', to: 'sessions#new', via: 'post'
+  # match '/signout', to: 'sessions#destroy', via: 'delete'
 end
