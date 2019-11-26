@@ -1,0 +1,16 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "Members Only Club", root_path, id: "logo", class: "align-middle"%>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home", root_path %></li>
+        <% if signed_in? %>
+          <li><%= link_to "Sign out", signout_path, method: :delete %></li>
+          <li><%= current_user.name %> </li>
+        <% else %>
+          <li><%= link_to "Sign in", signin_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>

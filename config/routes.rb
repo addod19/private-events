@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   resources :sessions, only: %i[new create destroy]
   get 'signin', to: 'sessions#new'
   post 'signin', to: 'sessions#create'
-  get 'signout', to: 'sessions#destroy'
+  match '/signout', to: 'sessions#destroy', via: 'delete'
+  
+  # get 'signout', to: 'sessions#destroy', via: 'delete'
 
   # match '/signin', to: 'sessions#new', via: 'post'
-  # match '/signout', to: 'sessions#destroy', via: 'delete'
 end
