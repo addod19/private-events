@@ -1,0 +1,13 @@
+<h2>Index page</h2>
+
+<% if @events.any? %>
+<ul>
+    <% @events.each do |e| %>
+    <li>
+        <%= e.title %>
+        <%= e.location %>
+        <%= e.date %>
+    </li>
+    <% end %>
+</ul>
+<% end %>
