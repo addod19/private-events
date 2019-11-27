@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-    has_many :invitations, foreign_key: "user_id", class_name: "Invitation"
-
-
+    has_many :invitations, foreign_key: :creator_id
+    has_many :events, through: :invitations
 end

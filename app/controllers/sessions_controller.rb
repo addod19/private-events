@@ -11,12 +11,15 @@ class SessionsController < ApplicationController
       flash[:success] = 'Thank you for signing in!'
       sign_in @user
       remember @user
-      redirect_to root_url
+      redirect_to user_url(@user[:id])
     else
       # Create an error message.
       flash[:error] = 'Can not verify your email of password'
       render 'new'
     end
+  end
+
+  def show
   end
 
   def destroy
