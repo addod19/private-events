@@ -1,4 +1,6 @@
 <h1>this is User's show template</h1>
+<%= @user.name %><br>
+<%= @user.email %><br>
 
 
 <% if @user.events.any? %>
@@ -12,3 +14,13 @@
 <% end %>
   
 	<hr>
+
+<% if @user.events.any? %>
+  <% @user.events.each do |attendee| %>
+      <span class="attendee">
+          <%= attendee.user_id %>
+      </span> <br/>
+  <% end %>
+<% else %>
+  No attendees
+<% end %><br/>
