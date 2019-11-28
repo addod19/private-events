@@ -5,3 +5,14 @@
 <%= @event.location %><br>
 <%= @event.description %><br>
 <%= @creator.name %>
+<br>
+
+<% if @event.users.any? %>
+  <% @event.users.each do |attendee| %>
+      <span class="attendee">
+          <%= attendee.name %>
+      </span> <br/>
+  <% end %>
+<% else %>
+  No attendees
+<% end %><br/>
