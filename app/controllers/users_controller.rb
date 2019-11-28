@@ -16,7 +16,10 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find(params[:id])
+        # @events holds the events attended by the user
         @events = @user.events.paginate(page: params[:page])
+        # @created holds the events created by the user
+        @created = Event.all
     end
 
     private

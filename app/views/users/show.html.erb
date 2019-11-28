@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 <h1>this is User's show template</h1>
 <%= @user.name %><br>
 <%= @user.email %><br>
+=======
+<h1>This is <%= "#{@user.name}" %> personal page</h1>
+>>>>>>> f9b9108d647c4ba3b24d0b1598ada7eddc56a5fc
 
 
+<hr>
 <% if @user.events.any? %>
-		<h3>Submitted (<%= @user.events.count %>) events</h3>
+		<h3>Attended (<%= @user.events.count %>) events</h3>
 		<ul class="media-list">
 			<%= render @events %>
 		</ul>
@@ -15,6 +20,7 @@
   
 	<hr>
 
+<<<<<<< HEAD
 <% if @user.events.any? %>
   <% @user.events.each do |attendee| %>
       <span class="attendee">
@@ -23,4 +29,16 @@
   <% end %>
 <% else %>
   No attendees
+=======
+<% if @created.any? %>
+<h3>Created events</h3>
+	<% @created.select {|e| e.user_id == @user.id}.each do |event| %>
+		<ul class="media-list">
+			<%= render event %>
+		</ul>
+
+	<% end %>
+<% else %>
+  <h3>No events created</h3>
+>>>>>>> f9b9108d647c4ba3b24d0b1598ada7eddc56a5fc
 <% end %><br/>
