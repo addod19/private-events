@@ -24,6 +24,10 @@ class EventsController < ApplicationController
         @creator = User.find(@event.user_id)
     end
 
+    def past_events
+
+    end
+
     private
 
         def event_params

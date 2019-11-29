@@ -18,8 +18,22 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         # @events holds the events attended by the user
         @events = @user.events.paginate(page: params[:page])
+        @upcoming = @events.select { |d| d.date > Date.today.to_s }
+        @past = @events.select { |d| d.date < Date.today.to_s }
         # @created holds the events created by the user
         @created = Event.all
+    end
+
+    def upcoming_events
+        @current_date = Date.today.to_s
+        @upcoming = @current_user.date < @events.date
+
+
+    end
+
+    def past_events?
+        @current_date = Date.today.to_s
+        @past = @current_user.date > @events.date
     end
 
     private

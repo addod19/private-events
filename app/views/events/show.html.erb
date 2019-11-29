@@ -16,3 +16,10 @@
 <% else %>
   No attendees
 <% end %><br/>
+
+<h4>Upcoming Events</h4>
+
+<% if @event.inspect %>
+  
+  <%= render @event %>
+<% end %>
