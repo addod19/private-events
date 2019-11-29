@@ -2,8 +2,8 @@ class EventsController < ApplicationController
 
     def index
         @events = Event.all
-        @upcoming = upcoming
-        @past = past
+        @upcoming = Event.upcoming
+        @past = Event.past
     end
 
     def new
@@ -25,14 +25,6 @@ class EventsController < ApplicationController
         @event = Event.find(params[:id]) 
         @creator = User.find(@event.user_id)
     end
-
-    def past
-        @events.select { |d| d.date.to_s < Date.today.to_s }
-    end
-
-    def upcoming
-        @events.select { |d| d.date.to_s > Date.today.to_s }
-    end    
 
     private
 
