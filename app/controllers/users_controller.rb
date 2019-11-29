@@ -24,18 +24,6 @@ class UsersController < ApplicationController
         @created = Event.all
     end
 
-    def upcoming_events
-        @current_date = Date.today.to_s
-        @upcoming = @current_user.date < @events.date
-
-
-    end
-
-    def past_events?
-        @current_date = Date.today.to_s
-        @past = @current_user.date > @events.date
-    end
-
     private
 
         def user_params

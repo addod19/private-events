@@ -11,3 +11,22 @@
     <% end %>
 </ul>
 <% end %>
+
+<hr>
+
+<h3>Upcoming Events</h3>
+<% if @upcoming.any? %>
+    <ul>
+        <%= render @upcoming %>
+
+    </ul>
+<% end %>
+
+<hr>
+<h3>Past Events</h3>
+<% if @past.any? %>
+    <ul>
+        <%= render @past %>
+
+    </ul>
+<% end %>
