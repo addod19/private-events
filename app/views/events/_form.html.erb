@@ -12,6 +12,6 @@
     <%= f.text_field :description %>
 
   <%= f.hidden_field :user_id, :value => current_user.id %>
-    <%= f.submit "Create your Events"%>
+    <%= f.submit "Create your Events", class: "btn btn-primary" %>
 
 <% end %>
