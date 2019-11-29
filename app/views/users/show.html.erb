@@ -4,6 +4,7 @@
 <hr>
 <% if @user.events.any? %>
 		<h3>Attended (<%= @user.events.count %>) events</h3>
+			
 		<ul class="media-list">
 			<%= render @events %>
 		</ul>
@@ -25,3 +26,17 @@
 <% else %>
   <h3>No events created</h3>
 <% end %><br/>
+
+<hr>
+
+<h2>Upcoming Events</h2>
+<% if @events.any? %>
+	<%= render @upcoming %>
+
+<% end %>
+
+<h2>Past Events</h2>
+<% if @events.any? %>
+	<%= render @past %>
+
+<% end %>
