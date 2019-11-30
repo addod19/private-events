@@ -1,0 +1,12 @@
+
+<div class="text-center jumbotron">
+    <% if @event.users.any? %>
+        <% @event.users.each do |attendee| %>
+            <span class="attendee">
+                <h3 class="text-success">Attendee: </h3><%= attendee.name %>
+            </span> <br/>
+        <% end %>
+    <% else %>
+        No attendees
+    <% end %><br/>
+</div>

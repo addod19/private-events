@@ -1,25 +1,24 @@
-<h2>Events show page</h2>
+<div class="row">
+  <div class="col-md-6 text-center jumbotron">
+    <h2 class="text-success">Events show page</h2>
+      Event date: <%= @event.date %><br>
+      Event title: <%= @event.title %><br>
+      Event location: <%= @event.location %><br>
+      Event description: <%= @event.description %><br>
+      Creator of Event: <%= @creator.name %>
+  </div>
+  <div class="col-md-6">
+      <%= render 'attendees' %>
+  </div>
+</div>
 
-<%= @event.date %><br>
-<%= @event.title %><br>
-<%= @event.location %><br>
-<%= @event.description %><br>
-<%= @creator.name %>
-<br>
-<hr>
-<% if @event.users.any? %>
-  <% @event.users.each do |attendee| %>
-      <span class="attendee">
-          <%= attendee.name %>
-      </span> <br/>
-  <% end %>
-<% else %>
-  No attendees
-<% end %><br/>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <%= render 'past_events' %>
+  </div>
+  <div class="col-md-3"></div>
+</div>
 
-<h4>Upcoming Events</h4>
 
-<% if @event.inspect %>
-  
-  <%= render @event %>
-<% end %>
+
