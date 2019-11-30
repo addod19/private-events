@@ -1,13 +1,12 @@
-<h1 class="text-center">This is <%= "#{@user.name}" %> personal page</h1>
+<h1 class="text-center text-white bg-info rounded mt-1">This is <%= "#{@user.name}" %> personal page</h1>
 
 
 <hr>
-
 <div class="row">
-	<div class="center">
+	<div class="col-md-6">
 		<% if @user.events.any? %>
-			<h3>Attended (<%= @user.events.count %>) events</h3>	
-			<ul class="media-list">
+			<h3 class="text-center">Attended (<%= @user.events.count %>) events</h3>	
+			<ul class="media-list jumbotron">
 				<%= render @events %>
 			</ul>
 			<%= will_paginate @events %>
@@ -15,29 +14,28 @@
 			<h3>No Events Found</h3>
 		<% end %>
 	</div>
-</div>
 
-  
+	<div class="col-md-6">
+		<% if @created.any? %>
+			<h3 class="text-center">Created events</h3>
+			<% @created.select {|e| e.user_id == @user.id}.each do |event| %>
+				<ul class="media-list jumbotron">
+					<%= render event %>
+				</ul>
+			<% end %>
+		<% else %>
+  			<h3>No events created</h3>
+		<% end %><br/>
+
+	</div>
+</div>  
 	<hr>
-
-<% if @created.any? %>
-<h3>Created events</h3>
-	<% @created.select {|e| e.user_id == @user.id}.each do |event| %>
-		<ul class="media-list">
-			<%= render event %>
-		</ul>
-
-	<% end %>
-<% else %>
-  <h3>No events created</h3>
-<% end %><br/>
-
-<hr>
 
 <h2>Upcoming Events</h2>
 <% if @events.any? %>
 	<%= render @upcoming %>
-
+<% else %>
+	<h3>No upcoming Events</h3>
 <% end %>
 
 <h2>Past Events</h2>
