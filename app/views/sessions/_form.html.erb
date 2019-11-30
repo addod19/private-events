@@ -1,7 +1,13 @@
-<%= form_for(:session, url: sessions_path) do |f| %>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <%= form_for(:session, url: sessions_path) do |f| %>
 
-    <%= f.label :email %>
-    <%= f.text_field :email, class: 'form-control' %>
+      <%= f.label :email %>
+      <%= f.text_field :email, class: 'form-control' %>
 
-    <%= f.submit "Sign in", class: "btn btn-large btn-primary form-control mt-1" %>
-  <% end %>
+      <%= f.submit "Sign in", class: "btn btn-large btn-primary form-control mt-1" %>
+    <% end %>  
+  </div>
+  <div class="col-md-3"></div>
+</div>

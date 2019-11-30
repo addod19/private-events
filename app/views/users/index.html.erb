@@ -1,8 +1,14 @@
-<h3>Welcome to Private Events!</h3>
+<h3 class="text-center">Welcome to Eventbrite!</h3>
 
 <div class="row bg">
   <div class="center text-white bg-dark">
-    Hi, <%= current_user.name %>
+    <p>
+      Hi, <% if signed_in? %>
+          <%= current_user.name %>
+        <% else %>
+        <h6>Friends</h6>
+        <% end %>
+    </p>
     <p>
         You can : 
           <% if signed_in? %>

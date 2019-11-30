@@ -1,19 +1,24 @@
 <div class="row">
+    <div class="col-sm-12 col-md-6">
+        <h3>Upcoming Events</h3>
+            <% if @upcoming.any? %>
+                <ul>
+                    <%= render @upcoming %>
+                </ul>
+            <% end %>
+    </div>
+    <div class="col-sm-12 col-md-6">
+        <h3>Past Events</h3>
+            <% if @past.any? %>
+                <ul>
+                    <%= render @past %>
+                </ul>
+            <% end %>
+    </div>
+</div>
+
+<div class="row">
     <%= render 'list_all_events'%>
 </div>
 <hr>
 
-<h3>Upcoming Events</h3>
-<% if @upcoming.any? %>
-    <ul>
-        <%= render @upcoming %>
-    </ul>
-<% end %>
-
-<hr>
-<h3>Past Events</h3>
-<% if @past.any? %>
-    <ul>
-        <%= render @past %>
-    </ul>
-<% end %>

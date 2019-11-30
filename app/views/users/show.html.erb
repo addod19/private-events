@@ -1,17 +1,21 @@
-<h1>This is <%= "#{@user.name}" %> personal page</h1>
+<h1 class="text-center">This is <%= "#{@user.name}" %> personal page</h1>
 
 
 <hr>
-<% if @user.events.any? %>
-		<h3>Attended (<%= @user.events.count %>) events</h3>
-			
-		<ul class="media-list">
-			<%= render @events %>
-		</ul>
-		<%= will_paginate @events %>
-	<% else %>
-		<h3>No Events Found</h3>
-<% end %>
+<div class="row">
+	<div class="center">
+		<% if @user.events.any? %>
+			<h3>Attended (<%= @user.events.count %>) events</h3>	
+			<ul class="media-list">
+				<%= render @events %>
+			</ul>
+			<%= will_paginate @events %>
+		<% else %>
+			<h3>No Events Found</h3>
+		<% end %>
+	</div>
+</div>
+
   
 	<hr>
 
