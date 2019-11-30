@@ -6,12 +6,12 @@
     <h4 class="media-heading"><%= link_to event.title, event_path(event) %></h4>
       <p>
         Location:
-        <%= event.location %>
+        <%= event.location %><br>
         Date: 
         <%= event.date %>
       </p>
       <p>
-      	Published On: <%= event.created_at.strftime('%b %d, %Y') %>
+      	Published On: <%= event.created_at.strftime('%b %d, %Y') %><br>
         <% if signed_in? %>
       	By: <%= link_to event.user_id, user_path(event.user_id) %><br>
         <% else %>
