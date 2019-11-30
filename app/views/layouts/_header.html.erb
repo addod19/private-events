@@ -1,35 +1,40 @@
 <header>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-fixed-top navbar-expand-lg navbar-light bg-dark">
 <div class="container">
-  <%= link_to "Members Only Club", root_path, id: "logo", class: "align-middle navbar-brand"%>
+  <form class="navbar-form navbar-left mr-1" role="search">
+    <div class="form-group">
+      <input type="text" placeholder="Search Events">
+    </div>
+  </form>
+  <%= link_to "eventbrite", root_path, id: "logo", class: "align-middle navbar-brand text-white"%>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <% if signed_in? %>
-          <li class="nav-item"><%= link_to "Sign out: ", signout_path, method: :delete, class:"nav-link" %></li>
-          <li class="nav-item nav-link" ><%= current_user.name %></li>
-          <li class="nav-item"><%= link_to "Create Events", new_event_path, class:"nav-link" %></li>
-          <li class="nav-item"><%= link_to "Events", events_path, class:"nav-link" %></li>
+          <li class="nav-item"><%= link_to "Sign out: ", signout_path, method: :delete, class:"nav-link text-danger" %></li>
+          <li class="nav-item nav-link text-primary" ><%= current_user.name %></li>
+          <li class="nav-item"><%= link_to "Create Events", new_event_path, class:"nav-link text-white" %></li>
+          <li class="nav-item"><%= link_to "Events", events_path, class:"nav-link text-white" %></li>
           
         <% else %>
-          <li class="nav-item"><%= link_to "Sign in", signin_path, class:"nav-link" %></li>
+          <li class="nav-item"><%= link_to "Sign in", signin_path, class:"nav-link text-white" %></li>
         <% end %>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
+        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Check Invitation
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" class="dark-bg">
+          <a class="dropdown-item" href="#" class="text-white">Action</a>
+          <a class="dropdown-item" href="#" class="text-white">Another action</a>
+          <a class="dropdown-item" href="#" class="text-white">Something else here</a>
         </div>
       </li>
     </ul>
   </div>
-  </div>
+</div>
 </nav>
 
 </header>

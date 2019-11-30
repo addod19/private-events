@@ -13,3 +13,30 @@
  */
 
 @import "bootstrap";
+$black: #000;
+$white: #fff;
+$three: 3em;
+$ten: 10em;
+$one: 1em;
+.navbar-custom {
+    nav {
+        background-color: $black;
+    }
+}
+
+.dark-bg {
+    background-color: $black;
+    color: $white;
+}
+
+.mt-2 {
+    margin-top: $three;
+}
+
+.mr-1 {
+    margin-right: $three !important;
+}
+
+.ml-1 {
+    margin-left: $three !important;
+}

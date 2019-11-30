@@ -1,16 +1,12 @@
-<h2>Index page</h2>
-
-<% if @events.any? %>
-<ul>
-    <% @events.each do |e| %>
-    <li>
-        <%= e.title %>
-        <%= e.location %>
-        <%= e.date %>
-    </li>
-    <% end %>
-</ul>
-<% end %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-7 center jumbotron">
+            <%= render 'list_all_events'%>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
 
 <hr>
 

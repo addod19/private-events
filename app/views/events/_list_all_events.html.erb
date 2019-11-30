@@ -1,0 +1,23 @@
+<h2 class="text-center font-weight-bold bg-dark text-white">Popular Events</h2>
+
+
+<% if @events.any? %>
+
+<% @events.each_slice(3) do |event| %>
+    <div class="row">
+        <% @events.each do |e| %>
+            <div class="col-sm-12 col-md-4 center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <%= image_tag "second.JPG", :class => "card-img-top" %>
+                        <h5>Title: <%= e.title %></h5>
+                        <h6>Location: <%= e.location %></h6>
+                        <h6>Date: <%= e.date %></h6>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div><br> 
+<% end %>    
+   
+<% end %>

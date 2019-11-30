@@ -16,6 +16,10 @@ class ApplicationController < ActionController::Base
     @current_user = nil
   end
 
-  
+  def index
+    @events = Event.all
+    @upcoming = Event.upcoming
+    @past = Event.past
+  end
 
 end
