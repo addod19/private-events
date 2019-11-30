@@ -40,3 +40,8 @@ $one: 1em;
 .ml-1 {
     margin-left: $three !important;
 }
+
+.bg {
+    background-image: url(bg.jpg);
+    height: $ten;
+}

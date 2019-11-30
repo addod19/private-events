@@ -1,19 +1,19 @@
-<h1>Welcome to Private Events!</h1>
+<h3>Welcome to Private Events!</h3>
 
-<div class="row">
-  <div class="jumbotron">
-hey
+<div class="row bg">
+  <div class="center text-white bg-dark">
+    Hi, <%= current_user.name %>
+    <p>
+        You can : 
+          <% if signed_in? %>
+            <%= link_to "Sign out", signout_path, method: :delete %>
+          <% else %>
+            <%= link_to 'Sign in', signin_path %>
+          <% end %>
+          or <%= link_to 'Sign up', new_user_path %>
+    </p>
   </div>
 </div>
 <hr>
 <%= render 'events/list_all_events'%>
 
-<p>
-  You can : 
-  <% if signed_in? %>
-    <%= link_to "Sign out", signout_path, method: :delete %>
-  <% else %>
-    <%= link_to 'Sign in', signin_path %>
-  <% end %>
-    or <%= link_to 'Sign up', new_user_path %>
-</p>

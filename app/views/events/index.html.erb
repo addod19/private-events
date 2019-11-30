@@ -1,20 +1,12 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-7 center jumbotron">
-            <%= render 'list_all_events'%>
-        </div>
-        <div class="col-md-2"></div>
-    </div>
+<div class="row">
+    <%= render 'list_all_events'%>
 </div>
-
 <hr>
 
 <h3>Upcoming Events</h3>
 <% if @upcoming.any? %>
     <ul>
         <%= render @upcoming %>
-
     </ul>
 <% end %>
 
@@ -23,6 +15,5 @@
 <% if @past.any? %>
     <ul>
         <%= render @past %>
-
     </ul>
 <% end %>
