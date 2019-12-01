@@ -1,0 +1,8 @@
+<h3 class="text-center text-danger">Past Events</h3>
+    <% if @past.any? %>
+        <ul>
+            <div class="jumbotron">
+                <%= render @past %>
+            </div>
+        </ul>
+    <% end %>

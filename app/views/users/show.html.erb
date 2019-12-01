@@ -31,15 +31,15 @@
 </div>  
 	<hr>
 
-<h2>Upcoming Events</h2>
-<% if @events.any? %>
-	<%= render @upcoming %>
-<% else %>
-	<h3>No upcoming Events</h3>
-<% end %>
 
-<h2>Past Events</h2>
-<% if @events.any? %>
-	<%= render @past %>
 
-<% end %>
+
+<div class="row">
+	<div class="col-md-6">
+		<%= render 'events/upcoming' %>
+	</div>
+
+	<div class="col-md-6">
+		<%= render 'events/past' %>
+	</div>
+</div>

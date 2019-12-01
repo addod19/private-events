@@ -15,6 +15,8 @@
 @import "bootstrap";
 $black: #000;
 $white: #fff;
+$light-gray: #777;
+$gray-medium-light: #eaeaea;
 $three: 3em;
 $ten: 10em;
 $one: 1em;
@@ -62,4 +64,32 @@ $one: 1em;
         pointer-events: none;
         color: #aaa;
     }
+}
+
+footer {
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid $gray-medium-light;
+    color: $light-gray;
+    a {
+        color: #555;
+        &:hover {
+            color: #222;
+        }
+    }
+    small {
+        float: left;
+    }
+    ul {
+        float: right;
+        list-style: none;
+        li {
+            float: left;
+            margin-left: 15px;
+        }
+    }
+}
+
+header {
+    scroll-behavior: smooth;
 }

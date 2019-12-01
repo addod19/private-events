@@ -1,23 +1,9 @@
 <div class="row">
     <div class="col-sm-12 col-md-6">
-        <h3 class="text-center text-success">Upcoming Events</h3>
-            <% if @upcoming.any? %>
-                <ul>
-                    <div class="jumbotron">
-                        <%= render @upcoming %>
-                    </div>
-                </ul>
-            <% end %>
+        <%= render 'upcoming' %>
     </div>
     <div class="col-sm-12 col-md-6">
-        <h3 class="text-center text-danger">Past Events</h3>
-            <% if @past.any? %>
-                <ul>
-                    <div class="jumbotron">
-                        <%= render @past %>
-                    </div>
-                </ul>
-            <% end %>
+        <%= render 'past' %>
     </div>
 </div>
 

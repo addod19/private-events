@@ -1,4 +1,4 @@
-<h2 class="text-center font-weight-bold bg-dark text-white mt-1">Popular Events</h2>
+<h2 class="text-center font-weight-bold bg-dark text-white mt-1 rounded">Popular Events</h2>
 
 
 <% if @events.any? %>
@@ -9,7 +9,7 @@
             <div class="col-sm-12 col-md-4 center">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                        <%= image_tag "second.JPG", :class => "card-img-top" %>
+                        <%= image_tag "pp.jpeg", :class => "card-img-top" %>
                         <h5>Title: <%= e.title %></h5>
                         <h6>Location: <%= e.location %></h6>
                         <h6>Date: <%= e.date %></h6>
