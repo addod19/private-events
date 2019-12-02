@@ -21,16 +21,11 @@ module SessionsHelper
     !current_user.nil?
   end
 
-  # Remembers given user
   def remember(user)
-    # user.remember_token
     cookies.permanent.signed[:user_id] = user.id
-    # cookies.permanent[:remember_token] = user.remember_token
   end
 
-  # Forgets given user
   def forget(_user)
     cookies.delete(:user_id)
-    # cookies.delete(:remember_token)
   end
 end

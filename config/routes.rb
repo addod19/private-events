@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show, :index]
   resources :sessions, only: %i[new create destroy show]
   resources :events
+
   get 'signin', to: 'sessions#new'
   post 'signin', to: 'sessions#create'
   match '/signout', to: 'sessions#destroy', via: 'delete'
@@ -11,4 +12,6 @@ Rails.application.routes.draw do
   # get 'signout', to: 'sessions#destroy', via: 'delete'
 
   # match '/signin', to: 'sessions#new', via: 'post'
+
+  match "/signup", to: "users#new", via: "get"
 end
