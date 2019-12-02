@@ -4,7 +4,7 @@ In this project we build a site similar to a private Eventbrite which allows use
 
 ## Screenshot
 
-![screenshot](assets/images/Screenshot.jpg)
+![screenshot](app/assets/images/Screenshot.jpg)
 
 ## Getting started
 
