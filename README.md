@@ -1,24 +1,36 @@
-# README
+# Private events project using Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In this project we build a site similar to a private Eventbrite which allows users to create events and then manage user signups. Users can create events. Events take place at a specific date and at a location (which you can just store as a string, like “Andy’s House”). A user can create events. A user can attend many events. An event can be attended by many users.
 
-Things you may want to cover:
+## Getting started
 
-* Ruby version
+To get started with the app, first clone the repo
 
-* System dependencies
+```
+git clone  https://github.com/addod19/private-events.git
+```
 
-* Configuration
+Then install the needed gems:
 
-* Database creation
+```
+bundle install --without production
+```
 
-* Database initialization
+Next, migrate the database:
 
-* How to run the test suite
+```
+ rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Finally, run the app in a local server:
 
-* Deployment instructions
+```
+ rails server
+```
 
-* ...
+## Contributors
+
+1. [Daniel Larbi Addo](www.github.com/addod19)
+2. [Nick Haralampopoulos](www.github.com/macnick)
+
+To see more information and learn about Rails check this [Ruby on Rails](https://www.railstutorial.org/book) Tutorial book.
