@@ -22,5 +22,17 @@ RSpec.describe User, type: :model do
       email = User.new(:name => 'Nick Haras', :email => '').save
       expect(email).to eq(false)
     end
+
+    it 'is invalid with user name longer than specified' do
+      user = User.new(name: 'ababa' * 12, email: '')
+      user.valid?
+      expect(user.errors[:name]).to include('is too long (maximum is 40 characters)')
+    end
+
+    it 'is invalid with user name shorter than specified' do
+      user = User.new(name: 'ababa', email: '')
+      user.valid?
+      expect(user.errors[:name]).to include('is too short (minimum is 10 characters)')
+    end
   end
 end
