@@ -2,18 +2,19 @@
 
 <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-light bg-dark">
 <div class="container">
-  <form class="navbar-form navbar-left mr-1" role="search">
+  <%# <form class="navbar-form navbar-left mr-1" role="search">
     <div class="form-group has-search">
       <span class="fa fa-search form-control-feedback"></span>
       <input type="text" placeholder="Search Events">
     </div>
-  </form>
+  </form> %>
+
   <%= link_to "eventbrite", root_path, id: "logo", class: "align-middle navbar-brand text-white"%>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav mr-auto">
       <% if signed_in? %>
           <li class="nav-item"><%= link_to "Sign out: ", signout_path, method: :delete, class:"nav-link text-danger" %></li>
           <li class="nav-item nav-link text-primary" ><%= current_user.name %></li>
@@ -33,6 +34,10 @@
         </div>
       </li>
     </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search Events" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
   </div>
 </div>
 </nav>
