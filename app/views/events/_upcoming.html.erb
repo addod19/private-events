@@ -1,9 +1,15 @@
 <h3 class="text-center text-success">Upcoming Events</h3>
     <% if @upcoming.any? %>
         <ul>
+            <% @upcoming.each do |event| %>
             <div class="jumbotron">
-                <%= render @upcoming %>
+                    Event title: <%= event.title %><br>
+                    Event date: <%= event.date.to_date %><br>
+                    Event location: <%= event.location %><br>
+                    Event description: <%= event.description %><br>
+                    Creator of Event: <%= event.creator.name %>
             </div>
+                <% end %>
         </ul>
     <% else %>
         <h4 class="jumbotron">No upcoming events</h4>    

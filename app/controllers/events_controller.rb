@@ -3,21 +3,21 @@
 class EventsController < ApplicationController
   def index
     @events = Event.all
-    @upcoming = Event.upcoming
+    @upcoming = Event.upcoming.order(date: :asc)
     @past = Event.past
   end
 
   def new
-    @event = current_user.events.build
+    @event = Event.new
   end
 
   def create
-    @event = Event.new(event_params)
+    @event = current_user.events.build(event_params)
     if @event.save
-      flash[:success] = 'Your account was created successfully'
+      flash[:success] = 'Your event was created successfully'
       redirect_to @event
     else
-      flash[:danger] = 'User was not created'
+      flash[:danger] = 'Event was not created'
       render 'new'
     end
   end
@@ -30,6 +30,6 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :location, :date, :description, :user_id)
+    params.require(:event).permit(:title, :location, :description, :date)
   end
 end

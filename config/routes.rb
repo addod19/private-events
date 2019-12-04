@@ -4,14 +4,12 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show, :index]
   resources :sessions, only: %i[new create destroy show]
   resources :events
+  resources :invitations, only: [:create]
 
   get 'signin', to: 'sessions#new'
   post 'signin', to: 'sessions#create'
-  match '/signout', to: 'sessions#destroy', via: 'delete'
+  match 'signout', to: 'sessions#destroy', via: 'delete'
+  get 'invite', to: 'invitations#new'
   
-  # get 'signout', to: 'sessions#destroy', via: 'delete'
-
-  # match '/signin', to: 'sessions#new', via: 'post'
-
-  match "/signup", to: "users#new", via: "get"
+  match "signup", to: "users#new", via: "get"
 end
