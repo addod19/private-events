@@ -2,12 +2,12 @@
     <% if @upcoming.any? %>
         <ul>
             <% @upcoming.each do |event| %>
-            <div class="jumbotron">
-                    Event title: <%= event.title %><br>
-                    Event date: <%= event.date.to_date %><br>
-                    Event location: <%= event.location %><br>
-                    Event description: <%= event.description %><br>
-                    Creator of Event: <%= event.creator.name %>
+            <div class="breadcrumb">
+                <h3><%= event.title %></h3>
+                Location: <%= event.location %><br>
+                Date: <%= event.date.to_date %><br>
+                Description: <%= event.description %>
+                <small class="createdby" >Created by: <%= event.creator.name %></small>
             </div>
                 <% end %>
         </ul>

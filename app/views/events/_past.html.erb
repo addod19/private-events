@@ -1,8 +1,16 @@
 <h3 class="text-center text-danger">Past Events</h3>
     <% if @past.any? %>
         <ul>
-            <div class="jumbotron">
-                <%= render @past %>
+            <% @past.each do |event| %>
+            <div class="breadcrumb">
+                <h3><%= event.title %></h3>
+                Location: <%= event.location %><br>
+                Date: <%= event.date.to_date %><br>
+                Description: <%= event.description %>
+                <small class="createdby">Created by: <%= event.creator.name %></small>
             </div>
+            <% end %>
         </ul>
+    <% else %>
+        <h4 class="jumbotron">No past events</h4>   
     <% end %>

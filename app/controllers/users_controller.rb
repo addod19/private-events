@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     @upcoming = @events.select { |d| d.date > Date.today.to_s }
     @past = @events.select { |d| d.date < Date.today.to_s }
     # @created holds the events created by the user
-    @created = Event.all
+    @created = @user.events
   end
 
   private
