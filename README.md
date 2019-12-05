@@ -98,15 +98,15 @@ heroku open
 
 👤 **Author1**
 
-- Github: [@githubhandle](https://github.com/addod19)
-- Twitter: [@twitterhandle](https://twitter.com/DanielLarbiAdd1)
-- Linkedin: [linkedin](https://linkedin.com/in/daniel-larbi-addo-9738b0128/)
+- Github: [@addod19](https://github.com/addod19)
+- Twitter: [@DanielLarbiAdd1](https://twitter.com/DanielLarbiAdd1)
+- Linkedin: [daniel](https://linkedin.com/in/daniel-larbi-addo-9738b0128/)
 
 👤 **Author2**
 
-- Github: [@githubhandle](https://github.com/macnick)
-- Twitter: [@twitterhandle](https://twitter.com/mac_experts)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@macnick](https://github.com/macnick)
+- Twitter: [@mac_experts](https://twitter.com/mac_experts)
+- Linkedin: [mac_nick](https://linkedin.com/linkedinhandle)
 
 ## 🤝 Contributing
 
