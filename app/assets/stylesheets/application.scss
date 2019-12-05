@@ -11,8 +11,6 @@
  * It is generally better to create a new file per style scope.
  *
  */
-
-@import "bootstrap";
 $black: #000;
 $white: #fff;
 $light-gray: #777;
@@ -20,76 +18,82 @@ $gray-medium-light: #eaeaea;
 $three: 3em;
 $ten: 10em;
 $one: 1em;
+
+@import "bootstrap";
+
 .navbar-custom {
-    nav {
-        background-color: $black;
-    }
+  nav {
+    background-color: $black;
+  }
 }
 
 .dark-bg {
-    background-color: $black;
-    color: $white;
+  background-color: $black;
+  color: $white;
 }
 
 .mt-2 {
-    margin-top: $three;
+  margin-top: $three;
 }
 
 .mr-1 {
-    margin-right: $three !important;
+  margin-right: $three !important;
 }
 
 .ml-1 {
-    margin-left: $three !important;
+  margin-left: $three !important;
 }
 
 .bg {
-    background-image: url(bg.jpg);
-    height: $ten;
+  background-image: url(bg.jpg);
+  height: $ten;
 }
 
 .mt-1 {
-    margin-top: 1em !important;
+  margin-top: 1em !important;
 }
 
 .has-search {
-    .has-search .form-control-feedback {
-        position: absolute;
-        z-index: 2;
-        display: block;
-        width: 2.375rem;
-        height: 2.375rem;
-        line-height: 2.375rem;
-        text-align: center;
-        pointer-events: none;
-        color: #aaa;
-    }
+  .has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+  }
+}
+
+.createdby {
+  float: left;
+  border-top: 1px solid #f00;
+  margin-top: 10px;
 }
 
 footer {
-    margin-top: 45px;
-    padding-top: 5px;
-    border-top: 1px solid $gray-medium-light;
-    color: $light-gray;
-    a {
-        color: #555;
-        &:hover {
-            color: #222;
-        }
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $light-gray;
+  a {
+    color: #555;
+    &:hover {
+      color: #222;
     }
-    small {
-        float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
     }
-    ul {
-        float: right;
-        list-style: none;
-        li {
-            float: left;
-            margin-left: 15px;
-        }
-    }
+  }
 }
 
 header {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
