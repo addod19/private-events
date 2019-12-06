@@ -1,45 +1,15 @@
 <h1 class="text-center text-white bg-info rounded mt-1">This is <%= "#{@user.name}" %> personal page</h1>
 
-
 <hr>
-<div class="row">
-	<div class="col-md-6">
-		<% if @user.events.any? %>
-			<h3 class="text-center">Attended (<%= @user.events.count %>) events</h3>	
-			<ul class="media-list jumbotron">
-				<%= render @events %>
-			</ul>
-			<%= will_paginate @events %>
-		<% else %>
-			<h3>No Events Found</h3>
-		<% end %>
-	</div>
-
-	<div class="col-md-6">
-		<% if @created.any? %>
-			<h3 class="text-center">Created events</h3>
-			<% @created.select {|e| e.user_id == @user.id}.each do |event| %>
-				<ul class="media-list jumbotron">
-					<%= render event %>
-				</ul>
-			<% end %>
-		<% else %>
-  			<h3>No events created</h3>
-		<% end %><br/>
-
-	</div>
-</div>  
-	<hr>
-
-
-
 
 <div class="row">
-	<div class="col-md-6">
+
+	<div class="col-xs-6">
 		<%= render 'events/upcoming' %>
 	</div>
 
-	<div class="col-md-6">
+	<div class="col-xs-6">
 		<%= render 'events/past' %>
 	</div>
-</div>
+
+</div> 

@@ -1,16 +1,16 @@
 <h3 class="text-center text-success">Upcoming Events</h3>
-    <% if @upcoming.any? %>
-        <ul>
-            <% @upcoming.each do |event| %>
+    <% if @user.upcoming_events.any? %>
+            <% @user.upcoming_events.each do |event| %>
             <div class="breadcrumb">
-                <h3><%= event.title %></h3>
-                Location: <%= event.location %><br>
-                Date: <%= event.date.to_date %><br>
-                Description: <%= event.description %>
-                <small class="createdby" >Created by: <%= event.creator.name %></small>
+            <ul class="event-list">
+                <li><h3><%= event.title %></h3></li>
+                <li>Location: <%= event.location %></li>
+                <li>Date: <%= event.date.to_date %></li>
+                <li>Description: <%= event.description %></li>
+                <li><small class="createdby">Created by: <%= event.creator.name %></small></li>
+            </ul>
             </div>
-                <% end %>
-        </ul>
+            <% end %>
     <% else %>
-        <h4 class="jumbotron">No upcoming events</h4>    
+        <h4 class="breadcrumb">No past events</h4>   
     <% end %>
