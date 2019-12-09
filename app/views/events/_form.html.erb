@@ -1,0 +1,19 @@
+<%= form_for(@event) do |f| %>
+    <%= render 'shared/error_messages_for_event'%>
+
+    <%= f.label :date %>
+    <%= f.text_field :date, :class => "form-control" %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title, :class => "form-control" %>
+
+    <%= f.label :location %>
+    <%= f.text_field :location, :class => "form-control" %>
+
+    <%= f.label :description %>
+    <%= f.text_area :description, :class => "form-control" %>
+
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.submit "Create your Events", class: "btn btn-primary form-control mt-2" %>
+
+<% end %>

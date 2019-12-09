@@ -1,0 +1,33 @@
+<h1 class="text-center text-white bg-info rounded mt-1">This is <%= "#{@user.name}" %> personal page</h1>
+
+
+<section class="container m-5">
+<h2 class="m-4">Events</h2>
+
+        <ul class="nav nav-pills nav-fill m-5" id="pills-tab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="pills-upcoming-tab" data-toggle="pill" href="#pills-upcoming" role="tab" aria-controls="pills-upcoming" aria-selected="true">Upcoming events</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="pills-past-tab" data-toggle="pill" href="#pills-past" role="tab" aria-controls="pills-past" aria-selected="false">Past events</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="pills-created-tab" data-toggle="pill" href="#pills-created" role="tab" aria-controls="pills-created" aria-selected="false">Created events</a>
+        </li>
+        </ul>
+
+
+    <div class="container">
+        <div class="tab-content" id="pills-content-tab">
+            <div class="tab-pane fade show active" id="pills-upcoming" role="tabpanel" aria-labelledby="pills-upcoming-tab">
+                <%= render 'shared/list_events', {events: @user.upcoming_events, type: 'upcoming'} %>
+        </div>
+        <div class="tab-pane fade" id="pills-past" role="tabpanel" aria-labelledby="pills-past-tab">
+                <%= render 'shared/list_events', {events: @user.past_events, type: 'past'} %>         
+        </div>
+        <div class="tab-pane fade" id="pills-created" role="tabpanel" aria-labelledby="pills-created-tab">
+                <%= render 'shared/list_events', {events: @user.events, type: 'created'} %>         
+        </div>
+        </div>
+    </div>
+</section>

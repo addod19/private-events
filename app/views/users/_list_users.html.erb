@@ -1,0 +1,17 @@
+<section class="container">
+
+<h3 class="text-center text-success">Listing all users</h3>
+    <% if @users.any? %>
+            <% @users.each do |user| %>
+            <div class="breadcrumb">
+            <ul class="event-list">
+                <li><h3><%= user.name %></h3></li>
+                <li>Location: <%= user.email %></li>
+            </ul>
+            </div>
+            <% end %>
+    <% else %>
+        <h4 class="breadcrumb">There are no users yet.</h4>   
+    <% end %>
+
+    </section>

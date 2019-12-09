@@ -1,0 +1,13 @@
+
+
+<%= form_for(@user) do |f| %>
+<%= render 'shared/error_messages_for_user'%>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+
+    <%= f.label :email %>
+    <%= f.email_field :email, class: 'form-control' %>
+
+    <%= f.submit "Create User", class: 'btn btn-success form-control mt-1'%>
+
+<% end %>

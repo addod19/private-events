@@ -1,0 +1,20 @@
+<%if events.blank? %>
+    <h3 class="text-center p-5">No <%= type%> events</h3>
+<% else %>
+    <% events.each do |e| %>
+        <div class="card m-4">
+            <div class="card-body">
+                <h5 class="card-title"><%= e.title%></h5>
+                <p class="card-text"><%= e.description%></p>
+                <%= link_to "View", event_path(e.id), class: "btn btn-primary float-right"%>
+            </div>
+            <div class="card-footer text-muted text-right">
+                <%= type == 'past' ? time_ago_in_words(e.date) : e.date.to_date %>
+                <%if type == 'past'%>
+                <span> ago</span>
+                <%end%>    
+            </div>
+        </div>
+    <% end %>
+
+<%end%>

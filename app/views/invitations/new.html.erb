@@ -1,0 +1,13 @@
+<div class="row m-0">
+  <div class="col-md-6 card p-5 m-5">
+  <h1>Invite</h1>
+  <br>
+      <%= form_for @invitation do |f| %>
+        <%= f.label :email, "Email" %>
+        <%= f.text_field :email, required: true, placeholder: 'example@mail.com' ,class: 'form-control m-2' %>
+        <%= f.hidden_field :event_id, value: params[:eventid] %>
+        <%= f.hidden_field :event_creator, value: current_user.id %>
+        <%= f.submit 'Invite',  class: 'btn btn-primary float-right'%>
+      <% end %>
+  </div>
+</div>

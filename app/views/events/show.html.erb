@@ -1,0 +1,23 @@
+
+
+
+<div class="row m-0">
+  <div class="col-md-6 card p-5 m-5">
+      <h1><%= @event.title%></h1>
+      <p class="card-subtitle">by <%= @event.creator.name %></p>
+      <br>
+      <div class="card-body">
+          <%= @event.description %>
+      </div>
+
+      <div>
+          <%= @event.date.to_date %>
+          <% if @event.creator && @event.date > DateTime.now %>
+              <%= link_to "Invite", invite_path(eventid: @event.id) , class: "btn btn-primary w-25 float-right" %>
+          <% end %>
+      </div>
+  </div>
+
+</div>
+
+<%= render 'attendees'%>
