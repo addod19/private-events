@@ -11,7 +11,7 @@
       </div>
 
       <div>
-          <%= @event.date %>
+          <%= @event.date.to_date %>
           <% if @event.creator && @event.date > DateTime.now %>
               <%= link_to "Invite", invite_path(eventid: @event.id) , class: "btn btn-primary w-25 float-right" %>
           <% end %>

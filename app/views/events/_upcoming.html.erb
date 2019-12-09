@@ -1,6 +1,8 @@
+<section class="container">
+
 <h3 class="text-center text-success">Upcoming Events</h3>
-    <% if @user.upcoming_events.any? %>
-            <% @user.upcoming_events.each do |event| %>
+    <% if @upcoming.any? %>
+            <% @upcoming.upcoming.each do |event| %>
             <div class="breadcrumb">
             <ul class="event-list">
                 <li><h3><%= event.title %></h3></li>
@@ -14,3 +16,5 @@
     <% else %>
         <h4 class="breadcrumb">No past events</h4>   
     <% end %>
+
+    </section>

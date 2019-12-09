@@ -9,7 +9,7 @@
                 <%= link_to "View", event_path(e.id), class: "btn btn-primary float-right"%>
             </div>
             <div class="card-footer text-muted text-right">
-                <%= type == 'past' ? time_ago_in_words(e.date) : e.date %>
+                <%= type == 'past' ? time_ago_in_words(e.date) : e.date.to_date %>
                 <%if type == 'past'%>
                 <span> ago</span>
                 <%end%>    

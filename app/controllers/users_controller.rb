@@ -26,6 +26,10 @@ class UsersController < ApplicationController
     @created = @user.events
   end
 
+  def index
+    @users = User.all.order(id: :asc)
+  end
+
   private
 
   def user_params
