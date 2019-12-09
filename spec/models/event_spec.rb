@@ -8,7 +8,7 @@ RSpec.describe Event, type: :model do
       event = Event.new(title: 'Birthday party', location: 'Accra', user_id: '2',
                         description: "Daniel's party with Jack Daniels",
                         date: '2020-02-03')
-      expect(event).to be_valid
+      expect(event).to be_truthy
     end
   end
 

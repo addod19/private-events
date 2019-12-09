@@ -18,7 +18,7 @@ RSpec.describe User, type: :model do
     it 'is invalid with user name longer than specified' do
       user = User.new(name: 'ababa' * 12, email: '')
       user.valid?
-      expect(user.errors[:name]).to include('is too long (maximum is 40 characters)')
+      expect(user.errors[:name]).to include('is too long (maximum is 50 characters)')
     end
 
     it 'is invalid with user name shorter than specified' do
