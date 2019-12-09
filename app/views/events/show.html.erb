@@ -1,24 +1,23 @@
-<div class="row mt-1">
-  <div class="col-md-6 text-center jumbotron">
-    <h2 class="text-success">Events show page</h2>
-      Event date: <%= @event.date %><br>
-      Event title: <%= @event.title %><br>
-      Event location: <%= @event.location %><br>
-      Event description: <%= @event.description %><br>
-      Creator of Event: <%= @creator.name %>
+
+
+
+<div class="row m-0">
+  <div class="col-md-6 card p-5 m-5">
+      <h1><%= @event.title%></h1>
+      <p class="card-subtitle">by <%= @event.creator.name %></p>
+      <br>
+      <div class="card-body">
+          <%= @event.description %>
+      </div>
+
+      <div>
+          <%= @event.date %>
+          <% if @event.creator && @event.date > DateTime.now %>
+              <%= link_to "Invite", invite_path(eventid: @event.id) , class: "btn btn-primary w-25 float-right" %>
+          <% end %>
+      </div>
   </div>
-  <div class="col-md-6">
-      <%= render 'attendees' %>
-  </div>
+
 </div>
 
-<div class="row mt-1">
-  <div class="col-md-3"></div>
-  <div class="col-md-6">
-    <%= render 'past_events' %>
-  </div>
-  <div class="col-md-3"></div>
-</div>
-
-
-
+<%= render 'attendees'%>
