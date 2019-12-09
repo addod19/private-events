@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class InvitationController < ApplicationController
 
+class InvitationsController < ApplicationController
   def new
     @invitation = Invitation.new
   end
@@ -24,11 +24,8 @@ class InvitationController < ApplicationController
 
   private
 
-
-
-    def invitation_params
-      params.require(:invitation).permit(:email, :event_creator, :event_id)
-    end
-  
+  def invitation_params
+    params.require(:invitation).permit(:email, :event_creator, :event_id)
+  end
 
 end
