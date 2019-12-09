@@ -7,7 +7,9 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.string :location
       t.text :description
       t.datetime :date
-      t.integer :user_id
+
+      # t.integer "creator_id"
+      # t.index ["creator_id"], name: "index_events_on_creator_id"
 
       t.timestamps
     end
