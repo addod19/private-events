@@ -1,3 +1,25 @@
+<h3 class="text-center">Welcome to Eventbrite!</h3>
+
+<div class="row bg">
+  <div class="center text-white bg-dark">
+    <p>
+      Hi, <% if signed_in? %>
+          <%= current_user.name %>
+        <% else %>
+        <h6>Friends</h6>
+        <% end %>
+    </p>
+    <p>
+        You can : 
+          <% if signed_in? %>
+            <%= link_to "Sign out", signout_path, method: :delete %>
+          <% else %>
+            <%= link_to 'Sign in', signin_path %>
+          <% end %>
+          or <%= link_to 'Sign up', new_user_path %>
+    </p>
+  </div>
+</div>
 <div class="row">
     <div class="col-sm-12">
         <%= render 'upcoming' %>
