@@ -10,22 +10,22 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav mr-auto">
       <% if signed_in? %>
-          <li class="nav-item"><%= link_to "Sign out: ", signout_path, method: :delete, class:"nav-link text-danger" %></li>
-          <li class="nav-item nav-link text-primary" ><%= link_to "#{current_user.name}", user_path(current_user.id) %></li>
-          <li class="nav-item"><%= link_to "Users", users_path, class:"nav-link text-white" %></li>
+        <li class="nav-item"><%= link_to "Sign out: ", signout_path, method: :delete, class:"nav-link text-danger" %></li>
+        <li class="nav-item nav-link text-primary" ><%= link_to "#{current_user.name}", user_path(current_user.id) %></li>
+        <li class="nav-item"><%= link_to "Users", users_path, class:"nav-link text-white" %></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Event actions
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" class="dark-bg">
+            <%= link_to "Show all events", events_path, class: "dropdown-item" %>
+            <%= link_to "Create Event", new_event_path, class:"dropdown-item" %>
+
+          </div>
+        </li>
         <% else %>
           <li class="nav-item"><%= link_to "Sign in", signin_path, class:"nav-link text-white" %></li>
         <% end %>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Event actions
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" class="dark-bg">
-          <%= link_to "Show all events", events_path, class: "dropdown-item" %>
-          <%= link_to "Create Event", new_event_path, class:"dropdown-item" %>
-
-        </div>
-      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search Events" aria-label="Search">
