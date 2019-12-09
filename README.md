@@ -106,7 +106,7 @@ heroku open
 
 - Github: [@macnick](https://github.com/macnick)
 - Twitter: [@mac_experts](https://twitter.com/mac_experts)
-- Linkedin: [mac_nick](https://www.linkedin.com/in/nick-haralampopoulos-26a55412a/)
+- Linkedin: [Nick Haralampopoulos](https://www.linkedin.com/in/nick-haralampopoulos-26a55412a/)
 
 ## 🤝 Contributing
 
