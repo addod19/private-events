@@ -108,6 +108,7 @@ heroku open
 - Twitter: [@mac_experts](https://twitter.com/mac_experts)
 - Linkedin: [Nick Haralampopoulos](https://www.linkedin.com/in/nick-haralampopoulos-26a55412a/)
 
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
