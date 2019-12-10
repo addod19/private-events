@@ -12,8 +12,8 @@ To see more information and learn about Rails check this [Ruby on Rails](https:/
 ## Built With
 
 - HTML,SCSS
-- Ruby on Rails,
-- Bootstrsap4
+- Ruby on Rails 5.1.2,
+- Bootstrap 4
 
 ## Live Demo
 
