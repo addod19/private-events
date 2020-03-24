@@ -12,8 +12,7 @@ gem 'font-awesome-sass', '~> 5.11.2'
 gem 'jquery-rails'
 gem 'rails', '~> 5.2.3'
 gem 'will_paginate', '3.1.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -44,6 +43,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'capybara', '>= 2.15'
@@ -66,6 +67,13 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'webdrivers', '~> 4.0'
 end
+
+group :production do
+  gem 'fog', '1.42'
+  # gem 'pg', '0.20.0'
+  gem 'pg', '~> 0.18.4'
+end
+
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
