@@ -8,6 +8,12 @@ In this project we build a site similar to a private Eventbrite which allows use
 
 To see more information and learn about Rails check this [Ruby on Rails](https://www.railstutorial.org/book) Tutorial book.
 
+## Features
+
+* User can see all the users on the list
+* User can signup or signin
+* After signing in a user can see upcoming events, past events and created events
+* A user can create an event after signing in
 
 ## Built With
 
