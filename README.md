@@ -15,6 +15,12 @@ To see more information and learn about Rails check this [Ruby on Rails](https:/
 * After signing in a user can see upcoming events, past events and created events
 * A user can create an event after signing in
 
+## Future Feature (v1.2)
+
+- Add animations
+- User can send invite to others
+- Improve the UI
+
 ## Built With
 
 - HTML,SCSS
