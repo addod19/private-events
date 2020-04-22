@@ -112,14 +112,19 @@ heroku open
 
 - Github: [@addod19](https://github.com/addod19)
 - Twitter: [@DanielLarbiAdd1](https://twitter.com/DanielLarbiAdd1)
-- Linkedin: [daniel](https://linkedin.com/in/daniel-larbi-addo-9738b0128/)
+- Linkedin: [daniel](https://linkedin.com/in/daniel-larbi-addo/)
 - Email: (addodaniellarbi@gmail.com)
 
 👤 **Author2**
 
 - Github: [@macnick](https://github.com/macnick)
 - Twitter: [@mac_experts](https://twitter.com/mac_experts)
-- Linkedin: [Nick Haralampopoulos](https://www.linkedin.com/in/nick-haralampopoulos-26a55412a/)
+- Linkedin: [Nick Haralampopoulos](https://www.linkedin.com/in/nick-haralampopoulos/)
+
+## Acknowledgements
+
+- Microverse
+- Microverse TSE's
 
 
 ## 🤝 Contributing
