@@ -93,9 +93,18 @@ rails s
 ```
 
 ### Run tests
-```
-rspec -fd
-```
+
+#### How to run test
+
+For unit testing run 
+``` rspec spec/models ```
+
+For feature test run
+``` rspec spec/features ```
+
+Or run
+``` rspec -fd ``` for all test
+
 
 ### Deployment with git and heroku
 ```
