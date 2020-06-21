@@ -117,14 +117,14 @@ heroku open
 
 ## Authors
 
-👤 **Author1**
+👤 **Daniel Larbi Addo**
 
 - Github: [@addod19](https://github.com/addod19)
 - Twitter: [@DanielLarbiAdd1](https://twitter.com/DanielLarbiAdd1)
 - Linkedin: [daniel](https://linkedin.com/in/daniel-larbi-addo/)
 - Email: (addodaniellarbi@gmail.com)
 
-👤 **Author2**
+👤 **Nick Haralampopoulos**
 
 - Github: [@macnick](https://github.com/macnick)
 - Twitter: [@mac_experts](https://twitter.com/mac_experts)
