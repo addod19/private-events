@@ -29,7 +29,7 @@ To see more information and learn about Rails check this [Ruby on Rails](https:/
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://blooming-mesa-54776.herokuapp.com/)
 
 
 ## Getting started
