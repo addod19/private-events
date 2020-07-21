@@ -12,7 +12,7 @@ To see more information and learn about Rails check this [Ruby on Rails](https:/
 
 * User can see all the users on the list
 * User can signup or signin
-* After signing in a user can see upcoming events, past events and created events
+* After signing in, a user can see upcoming events, past events and created events
 * A user can create an event after signing in
 
 ## Future Feature (v1.2)
